@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transEx4</title>
+    <style>
+        /* 
+        input:focus { 텍스트 필드에 포커스가 잡히면 }
+        input:checked { 체크박스에 체크가 되면 }
+        input:disabled { 비활성 }
+
+        input[type=checkbox]:checked {}
+        */
+        
+        body {
+            font-weight: bold; 
+            font-size: 1.2rem; 
+            background-color: darkslategrey;
+            margin: 50px;
+            }
+        body > h1{
+            color: #fff;
+        }
+        body > label{
+            color: #fff;
+        }
+        .container {
+            background-color: darkseagreen;
+            width: 600px;
+            height: 500px;
+            overflow: hidden;
+            transition: 1s;
+            padding: 0px 10px;
+            margin-top: 30px;
+        }
+        .container > h2{
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: cadetblue;
+            width: 800px; 
+            height: 200px;
+            margin: 0;
+            transition: 1s;
+            padding: 0px 10px;
+        }
+        input[type=checkbox]:checked ~ .box{
+            transform: translateY(-200px);
+        }
+        input[type=checkbox]:checked ~ .container{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>trans 연습 4</h1>
+    <input type="checkbox" name="check" id="check">
+    <label for="check">체크 박스가 체크되면 박스가 위로 올라와 사라집니다.</label>
+    <div class="container">
+        <h2>:checked</h2>
+        <p>청춘은 청춘의 있을 일월과 인생의 오직 눈에 쓸쓸하랴? 실현에 끓는 피에 트고, 사막이다. 곳이 낙원을 구하기 풍부하게 속에서 사막이다. 거선의 밥을 인간은 하였으며, 인생의 노년에게서 아름다우냐? </p>
+    </div>
+    <div class="box">
+        block
+    </div>
+</body>
+</html>
